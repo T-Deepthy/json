@@ -11,6 +11,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
+       
         <Route path="/" render={() => <App />} />
       </Switch>
     </ConnectedRouter>
