@@ -6,7 +6,7 @@ class MainFrame extends Component {
   render() {
     return ( 
         <div className="container-fluid mainframe-wrapper">
-         <Card title="Information About The Cryptocurrencies Converted Into USD"  style={{ width: '100%' }}>
+         <Card title="Table and tree structure of json data"  style={{ width: '100%' }}>
             <Home />
          </Card> 
         </div>
