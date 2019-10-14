@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import cryptoCurrencyReducer from './cryptoCurrencyReducer';
+import jsonReducer from './jsonReducer';
 
 
 export default (history) => combineReducers({
 	'router': connectRouter(history),
-	cryptoCurrencyReducer
+	jsonReducer
 });
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchCryptoCurrencies } from '../../actions'
+import { fetchJsonData } from '../../actions'
 import { Table } from 'antd';
 
 
@@ -12,9 +12,9 @@ class Home extends Component {
     this.state = {};
   }
   componentDidMount() {
-    this.props.fetchCurrency();
+    this.props.fetchJson();
   }
-  showCryptoCurrenyTable() {
+  showJsonTable() {
     const columns = [
       { title: 'Name', dataIndex: 'first_name', key: 'first_name' },
       { title: 'Last Name', dataIndex: 'last_name', key: 'last_name' },
@@ -27,8 +27,8 @@ class Home extends Component {
         <div>
           <Table
             columns={columns}
-            dataSource={this.props.foodItemState.data}
-            loading={this.props.foodItemState.loading}
+            dataSource={this.props.jsonState.data}
+            loading={this.props.jsonState.loading}
           />
         </div>
       )
@@ -39,7 +39,7 @@ class Home extends Component {
 
     return (
       <React.Fragment>
-        {this.showCryptoCurrenyTable()}
+        {this.showJsonTable()}
       </React.Fragment>
     );
   }
@@ -47,14 +47,14 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    foodItemState: state.cryptoCurrencyReducer
+    jsonState: state.jsonReducer
   }
 }
 
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    fetchCurrency: (props) => {
-      dispatch(fetchCryptoCurrencies())
+    fetchJson: (props) => {
+      dispatch(fetchJsonData())
     }
   }
 }
