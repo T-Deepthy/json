@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "antd/dist/antd.css";
 import Navigation from "./components/navigation/Navigation";
-import Tree from "./components/Tree/Tree";
+import TreeJson from "./components/Tree/TreeJson";
 export class App extends Component {
   render() {
     return (
@@ -13,7 +13,7 @@ export class App extends Component {
         <Navigation />
         <Switch>
           <Route path="/" render={() => <MainFrame />} exact/>
-          <Route path="/tree" render={() => <Tree />}  exact/>
+          <Route path="/tree" render={() => <TreeJson />}  exact/>
         </Switch>
       </React.Fragment>
     );
