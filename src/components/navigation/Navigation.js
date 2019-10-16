@@ -14,6 +14,19 @@ class Navigation extends Component {
                 <li className="nav-item">
                 <Link className="nav-link" to="/tree">Tree</Link>
                 </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/api">Api</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/sample">Sample Api</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/s">Sample</Link>
+                </li>
+
                 </ul>
             </div>
         </nav>
