@@ -8,7 +8,7 @@ import Navigation from "./components/navigation/Navigation";
 import TreeJson from "./components/Tree/TreeJson";
 import Api from "./Api";
 import SampleApi from "./SampleApi";
-// import Sample from "./components/Sample/Sample";
+import Sample from "./components/Sample/Sample";
 export class App extends Component {
   render() {
     return (
@@ -19,7 +19,7 @@ export class App extends Component {
           <Route path="/tree" render={() => <TreeJson />}  exact/>
           <Route path="/api" render={() => <Api />}  exact/>
           <Route path="/sample" render={() => <SampleApi />} exact/>
-          {/* <Route path="/s" render={() => <Sample />} exact /> */}
+          <Route path="/form" render={() => <Sample />} exact />
         </Switch>
       </React.Fragment>
     );

@@ -24,7 +24,7 @@ class Navigation extends Component {
                 </li>
 
                 <li className="nav-item">
-                <Link className="nav-link" to="/s">Sample</Link>
+                <Link className="nav-link" to="/form">Sample</Link>
                 </li>
 
                 </ul>
