@@ -1,6 +1,5 @@
 import React from "react";
 import "./Sample.css";
-import FormErrors from "./FormErrors";
 class Sample extends React.Component {
   constructor(props) {
     super(props);
@@ -33,20 +32,26 @@ class Sample extends React.Component {
 
     switch (fieldName) {
       case "firstName":
-        firstNameValid =  value.match(/^[a-zA-Z]+$/) ;
-        fieldValidationErrors.firstName = firstNameValid ? "" : " should be letters";
+        firstNameValid = value.match(/^[a-zA-Z]+$/);
+        fieldValidationErrors.firstName = firstNameValid
+          ? ""
+          : " First Name must be alphabet";
         break;
       case "lastName":
-        lastNameValid =value.match(/^[a-zA-Z]+$/);
-        fieldValidationErrors.lastName = lastNameValid ? "" : " should be letters";
+        lastNameValid = value.match(/^[a-zA-Z]+$/);
+        fieldValidationErrors.lastName = lastNameValid
+          ? ""
+          : "Last Name must be alphabet";
         break;
       case "email":
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-        fieldValidationErrors.email = emailValid ? "" : " is invalid";
+        fieldValidationErrors.email = emailValid ? "" : " Invalid email format";
         break;
       case "password":
         passwordValid = value.length >= 6;
-        fieldValidationErrors.password = passwordValid ? "" : " is too short";
+        fieldValidationErrors.password = passwordValid
+          ? ""
+          : " Password is too short";
         break;
       default:
         break;
@@ -75,12 +80,11 @@ class Sample extends React.Component {
     return error.length === 0 ? "" : "has-error";
   }
   render() {
+    console.log("fffff", this.state.formErrors.firstName);
+
     return (
       <div className="col-md-6 mx-auto thick">
         <h1>Sample Form</h1>
-        <div className="panel panel-default">
-          <FormErrors formErrors={this.state.formErrors} />
-        </div>
         <form>
           <div
             className={`form-group ${this.errorClass(
@@ -98,6 +102,7 @@ class Sample extends React.Component {
               onChange={this.handleUserInput}
             />
           </div>
+          <p className="error"> {this.state.formErrors.firstName} </p>
           <div
             className={`form-group ${this.errorClass(
               this.state.formErrors.lastName
@@ -114,6 +119,7 @@ class Sample extends React.Component {
               onChange={this.handleUserInput}
             />
           </div>
+          <p className="error"> {this.state.formErrors.lastName} </p>
           <label>Gender</label>
           <div className="form-check">
             <input
@@ -158,6 +164,7 @@ class Sample extends React.Component {
               We'll never share your email with anyone else.
             </small>
           </div>
+          <p className="error"> {this.state.formErrors.email} </p>
           <label>Marital Status</label>
           <div className="form-check">
             <input
@@ -194,6 +201,7 @@ class Sample extends React.Component {
               onChange={this.handleUserInput}
             />
           </div>
+          <p className="error">{this.state.formErrors.password}</p>
           <button
             type="submit"
             className="btn btn-primary mt-2"
