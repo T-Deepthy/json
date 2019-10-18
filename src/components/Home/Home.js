@@ -25,7 +25,7 @@ class Home extends Component {
     
       return (
         <div>
-          <Table
+          <Table key = {this.props.title}
             columns={columns}
             dataSource={this.props.jsonState.data}
             loading={this.props.jsonState.loading}

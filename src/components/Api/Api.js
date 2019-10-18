@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import apiAction from "./actions/ApiAction";
+import apiAction from "../../actions/ApiAction";
 import { connect } from "react-redux";
 import { Spin } from "antd";
 import "./Api.css";
@@ -14,8 +14,8 @@ class Api extends Component {
   }
   showValues() {
     if (!this.props.apiState.loading) {
-      const listItems = this.props.apiState.data.map(item => (
-        <li>{item.email}</li>
+      const listItems = this.props.apiState.data.map((item , index) => (
+        <li key={index}>{item.email}</li>
       ));
       return <ul>{listItems}</ul>;
     } else {

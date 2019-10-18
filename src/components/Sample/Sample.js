@@ -80,8 +80,6 @@ class Sample extends React.Component {
     return error.length === 0 ? "" : "has-error";
   }
   render() {
-    console.log("fffff", this.state.formErrors.firstName);
-
     return (
       <div className="col-md-6 mx-auto thick">
         <h1>Sample Form</h1>

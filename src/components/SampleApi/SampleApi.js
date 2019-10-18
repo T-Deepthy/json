@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import sampleApiAction from "./actions/SampleApiAction";
+import sampleApiAction from "../../actions/SampleApiAction";
 import { connect } from "react-redux";
 import { Spin } from "antd";
 
@@ -14,11 +14,11 @@ class SampleApi extends Component {
   }
   showValues() {
     if (!this.props.sampleApiState.loading) {
-      const listItems = this.props.sampleApiState.data.map(item => (
-        <table class="table">
+      const listItems = this.props.sampleApiState.data.map((item , index) => (
+        <table className="table" key={index}>
         <tbody>
           <tr>
-            <th scope="row">{item.id}</th>
+            <th scope="row" >{item.id}</th>
             <td>{item.first_name}</td>
             <td>{item.email}</td>
             <td>{item.gender}</td>
@@ -37,7 +37,7 @@ class SampleApi extends Component {
   }
   render() {
     return <div>
-        <table class="table">
+        <table className="table">
         <thead>
           <tr>
             <th scope="col">id</th>

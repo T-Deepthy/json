@@ -27,6 +27,17 @@ class Navigation extends Component {
                 <Link className="nav-link" to="/form">Sample</Link>
                 </li>
 
+                <li className="nav-item">
+                <Link className="nav-link" to="/task">Task</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/dnd">Drag and Drop</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/side">Side Bar</Link>
+                </li>
                 </ul>
             </div>
         </nav>
