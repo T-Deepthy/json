@@ -12,6 +12,10 @@ import Sample from "./components/Sample/Sample";
 import Task from "./components/Task/Task";
 import DragAndDrop from "./components/DragAndDrop/DragAndDrop";
 import SideBar from "./components/SideBar/SideBar";
+import './components/SideBar/SideBar.css';
+import BurgerMenu from './components/BurgerMenu/BurgerMenu';
+import './components/BurgerMenu/BurgerMenu.css';
+import Tasks from './components/Tasks/Tasks';
 export class App extends Component {
   render() {
     return (
@@ -26,6 +30,9 @@ export class App extends Component {
           <Route path="/task" render={() => <Task />} exact />
           <Route path="/dnd" render={() => <DragAndDrop />} exact />
           <Route path="/side" render={() => <SideBar />} exact />
+          <Route path="/burg" render={() => <BurgerMenu />} exact />
+          <Route path="/tasks" render={() => <Tasks />} exact />
+
         </Switch>
       </React.Fragment>
     );

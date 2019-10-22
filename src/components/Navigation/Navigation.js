@@ -38,6 +38,14 @@ class Navigation extends Component {
                 <li className="nav-item">
                 <Link className="nav-link" to="/side">Side Bar</Link>
                 </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/burg">Burger Menu</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/tasks">cTasks</Link>
+                </li>
                 </ul>
             </div>
         </nav>
