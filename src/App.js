@@ -16,6 +16,9 @@ import './components/SideBar/SideBar.css';
 import BurgerMenu from './components/BurgerMenu/BurgerMenu';
 import './components/BurgerMenu/BurgerMenu.css';
 import Tasks from './components/Tasks/Tasks';
+import LaReact from './components/LaReact/LaReact';
+import ReactHooks from './components/ReactHooks/ReactHooks';
+
 export class App extends Component {
   render() {
     return (
@@ -32,7 +35,8 @@ export class App extends Component {
           <Route path="/side" render={() => <SideBar />} exact />
           <Route path="/burg" render={() => <BurgerMenu />} exact />
           <Route path="/tasks" render={() => <Tasks />} exact />
-
+          <Route path="/lar" render={() => <LaReact />} exact />
+          <Route path="/reacthooks" render={() => <ReactHooks />} exact />
         </Switch>
       </React.Fragment>
     );

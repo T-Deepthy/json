@@ -46,6 +46,14 @@ class Navigation extends Component {
                 <li className="nav-item">
                 <Link className="nav-link" to="/tasks">cTasks</Link>
                 </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/lar">LaReact</Link>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/reacthooks">React Hooks</Link>
+                </li>
                 </ul>
             </div>
         </nav>
